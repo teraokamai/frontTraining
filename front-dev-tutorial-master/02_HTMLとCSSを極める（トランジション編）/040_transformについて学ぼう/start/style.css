@@ -3,5 +3,9 @@
   height: 100px;
   margin: 0 auto;
   background-color: orangered;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: translate(50%, 50%) rotate(45deg);
+          transform: translate(50%, 50%) rotate(45deg);
 }
 /*# sourceMappingURL=style.css.map */
