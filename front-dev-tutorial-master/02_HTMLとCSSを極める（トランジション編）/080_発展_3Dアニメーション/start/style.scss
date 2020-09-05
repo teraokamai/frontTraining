@@ -15,10 +15,17 @@ $cBlack: black;
   cursor: pointer;
   transition: all 0.3s;
 
-  &.slide-bg {
+  &.cover-3d {
     position: relative;
-    overflow: hidden;
     z-index: 1;
+    transform-style: preserve-3d;
+    perspective: 300px;
+
+    & span {
+      display: inline-block;
+      // transform: translateZ(20px); // z軸方向の指定で、重ね順を指定
+      transform: translate3d(0,0,20px); // この方法でもz軸方向の指定ができる
+    }
 
     &::before {
       content: '';
@@ -29,9 +36,10 @@ $cBlack: black;
       position: absolute;
       top: 0;
       left: 0;
-      transform: translateX(-100%);
-      transition: transform 0.3s;
-      z-index: -1;
+      transform: rotateX(90deg);  // X軸を中心にした回転
+      transition: all 0.3s; // 0.3秒で変化する
+      transform-origin: top center; // 軸の中心の設定(要素の上の辺)
+      opacity: 0; // 初期の透明度
     }
 
     &:hover {
@@ -39,6 +47,7 @@ $cBlack: black;
 
       &::before {
         transform: none;
+        opacity: 1; // hover後の透明度
       }
     }
   }
