@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>干支チェッカー</title>
+  <script>
+    function check() {
+      let year = parseInt(document.getElementById("year").value);
+      let zyukkann = "";
+      let zyuunisi = "";
+
+      switch(year%10){
+        case 0:
+          zyukkann = "庚"; break;
+        case 1: 
+          zyukkann = "辛"; break;
+        case 2: 
+          zyukkann = "壬"; break;
+        case 3: 
+          zyukkann = "癸"; break;
+        case 4: 
+          zyukkann = "甲"; break;
+        case 5: 
+          zyukkann = "乙"; break;
+        case 6: 
+          zyukkann = "丙"; break;
+        case 7: 
+          zyukkann = "丁"; break;
+        case 8: 
+          zyukkann = "戊"; break;
+        case 9: 
+          zyukkann = "庚"; break;
+      }
+
+      switch(year%12){
+        case 0:
+          zyuunisi = "申"; break;
+        case 1: 
+          zyuunisi = "酉"; break;
+        case 2: 
+          zyuunisi = "戌"; break;
+        case 3: 
+          zyuunisi = "亥"; break;
+        case 4: 
+          zyuunisi = "子"; break;
+        case 5: 
+          zyuunisi = "丑"; break;
+        case 6: 
+          zyuunisi = "寅"; break;
+        case 7: 
+          zyuunisi = "卯"; break;
+        case 8: 
+          zyuunisi = "辰"; break;
+        case 9: 
+          zyuunisi = "巳"; break;
+        case 10: 
+          zyuunisi = "午"; break;
+        case 11: 
+          zyuunisi = "未"; break;
+      }
+
+      document.getElementById("result").textContent = `${year}年の干支は${zyukkann}${zyuunisi}`
+    }
+  </script>
+</head>
+<body>
+  <h1 id="result"></h1>
+  <input type="text" id="year" value="2020"><input type="button" value="計算" onclick="check()">
+</body>
+</html>
