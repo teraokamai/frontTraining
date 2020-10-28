@@ -10,14 +10,31 @@ body {
   height: 100px;
   background-color: $cBlack;
   animation: sk-bouncedelay 1.4s;
+  animation-timing-function: ease;
+  // animation-delay: 3s; // 3秒後に開始
+  // animation-iteration-count: 4; // 4回繰り返す
+  animation-iteration-count: infinite; // 永遠ループ
+  // animation-direction: reverse; //100%から0％になる
+  animation-direction: alternate; // 折り返し
+  // animation-fill-mode: forwars; // アニメーション終了時の値を保持
 }
 
-@keyframes sk-bouncedelay {
+.paused {
+  animation-play-state: paused;
+}
+
+@keyframes sk-bouncedelay { // 0%~100%の間で指定可能
+  // 0%, 50%{
+  //   background: blue;
+  // }
+
   from {
     transform: scale(0);
+    background: blue;
   }
 
   to {
     transform: scale(1);
+    background: red;
   }
 }

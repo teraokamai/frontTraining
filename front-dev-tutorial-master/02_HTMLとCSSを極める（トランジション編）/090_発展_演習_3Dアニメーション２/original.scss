@@ -1,10 +1,7 @@
-$cWhite: white;
-$cBlack: black;
+$cWhite: #fff;
+$cGray: gray;
 
-#container {
-  text-align: center;
-}
-.try {
+.original {
   .btn {
     position: relative;
     display: inline-block;
@@ -16,31 +13,30 @@ $cBlack: black;
     cursor: pointer;
 
     &.cubic {
-      /** スタイルをここに追加。*/
       & span {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%; // 親要素と同じ50px
-        border: 1px solid $cBlack;
-        line-height: 48px; // borderが1pxなので、上下の50px - border * 2 で48px
+        height: 100%;
+        border: 1px solid $cGray;
+        line-height: 48px;
         text-align: center;
         transition: all 0.3s;
       }
 
       & .hovering {
-        background-color: $cBlack;
+        background-color: gray;
         color: $cWhite;
         transform: rotateX(90deg);
-        transform-origin: center center -25px;  // 中心軸の設定。高さ(50px)の半分(25)分だけ奥に設定。
+        transform-origin: center center -25px;
       }
 
       & .default {
         background-color: $cWhite;
-        color: $cBlack;
+        color: black;
         transform: rotateX(0);
-        transform-origin: center center -25px; // 中心軸の設定。高さ(50px)の半分(25)分だけ奥に設定。
+        transform-origin: center center -25px;
       }
 
       &:hover {

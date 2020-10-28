@@ -1,9 +1,4 @@
-@charset "UTF-8";
-#container {
-  text-align: center;
-}
-
-.try .btn {
+.original .btn {
   position: relative;
   display: inline-block;
   -webkit-transform-style: preserve-3d;
@@ -16,34 +11,30 @@
   cursor: pointer;
 }
 
-.try .btn.cubic {
-  /** スタイルをここに追加。*/
-}
-
-.try .btn.cubic span {
+.original .btn.cubic span {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid black;
+  border: 1px solid gray;
   line-height: 48px;
   text-align: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.try .btn.cubic .hovering {
-  background-color: black;
-  color: white;
+.original .btn.cubic .hovering {
+  background-color: gray;
+  color: #fff;
   -webkit-transform: rotateX(90deg);
           transform: rotateX(90deg);
   -webkit-transform-origin: center center -25px;
           transform-origin: center center -25px;
 }
 
-.try .btn.cubic .default {
-  background-color: white;
+.original .btn.cubic .default {
+  background-color: #fff;
   color: black;
   -webkit-transform: rotateX(0);
           transform: rotateX(0);
@@ -51,13 +42,13 @@
           transform-origin: center center -25px;
 }
 
-.try .btn.cubic:hover .hovering {
+.original .btn.cubic:hover .hovering {
   -webkit-transform: rotateX(0);
           transform: rotateX(0);
 }
 
-.try .btn.cubic:hover .default {
+.original .btn.cubic:hover .default {
   -webkit-transform: rotateX(-90deg);
           transform: rotateX(-90deg);
 }
-/*# sourceMappingURL=try.css.map */
+/*# sourceMappingURL=original.css.map */
