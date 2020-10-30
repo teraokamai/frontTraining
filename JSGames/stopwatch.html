@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ストップウォッチ</title>
+  <script>
+    let time;
+
+    function start() {
+      let now = new Date();
+      time = now.getTime();
+      document.getElementById("time").textContent = 0;
+    }
+
+    function stop() {
+      let now = new Date();
+      let sec = 0;
+
+      // スタートボタンが押されていたら差分を取得
+      if(time != 0){
+        sec = (now.getTime() - time) / 1000;
+      }
+
+      document.getElementById("time").textContent = sec;
+      time = 0;
+    }
+  </script>
+</head>
+<body>
+  <button onclick="start()">スタート</button>
+  <button onclick="stop()">ストップ</button>
+  <div>
+    <span id="time"></span>秒
+  </div>
+</body>
+</html>
